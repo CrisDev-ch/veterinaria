@@ -1,0 +1,324 @@
+[00:00:10.507] Server  LOG     ✓ Ready in 7.5s
+[00:00:24.914] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:05:06.020] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:05:06.521] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <SegmentViewNode type="layout" pagePath="layout.tsx">
+      <SegmentTrieNode>
+      <link>
+      <script>
+      <script>
+      <script>
+      <script>
+      <script>
+      <script>
+      <RootLayout>
+        <html lang="es">
+          <body className="bg-gradien...">
+            <SideMenu>
+            <main>
+            <div className="mt-0">
+              <Footer customSocialSection={<div>}>
+                <footer className="bg-gray-80...">
+                  <div>
+                  <div className="container ...">
+                    <div className="grid grid-...">
+                      <div>
+                        <h3>
+                        <div className="flex justi...">
+                          <div className="flex justi...">
+                            <div className="grid grid-...">
+                              <InstagramFooter>
+                                <styled.div ref={{current:null}} className="">
+                                  <div
++                                   className="sc-beqWay bwngVl"
+-                                   className="sc-dmqHEY jwReaI"
+                                    ref={{current:null}}
+                                  >
+                              <FacebookFooter>
+                                <styled.div ref={{current:null}} className="">
+                                  <div
++                                   className="sc-gueYod gfuBwf"
+-                                   className="sc-hLseeT YniuB"
+                                    ref={{current:null}}
+                                  >
+                              <TikTokFooter>
+                                <styled.div ref={{current:null}} className="">
+                                  <div
++                                   className="sc-dmqHEY JSxKP"
+-                                   className="sc-eDDNvO fjRMQp"
+                                    ref={{current:null}}
+                                  >
+                              <EmailFooter>
+                                <styled.div ref={{current:null}} className="">
+                                  <div
++                                   className="sc-hLseeT coHmvp"
+-                                   className="sc-jTrPJt bOaLCY"
+                                    ref={{current:null}}
+                                  >
+                      ...
+                    ...
+
+[00:05:18.655] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:05:19.095] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <SegmentViewNode type="layout" pagePath="layout.tsx">
+      <SegmentTrieNode>
+      <link>
+      <script>
+      <script>
+      <script>
+      <script>
+      <script>
+      <script>
+      <RootLayout>
+        <html lang="es">
+          <body className="bg-gradien...">
+            <SideMenu>
+            <main>
+            <div className="mt-0">
+              <Footer customSocialSection={<div>}>
+                <footer className="bg-gray-80...">
+                  <div>
+                  <div className="container ...">
+                    <div className="grid grid-...">
+                      <div>
+                        <h3>
+                        <div className="flex justi...">
+                          <div className="flex justi...">
+                            <div className="grid grid-...">
+                              <InstagramFooter>
+                                <styled.div ref={{current:null}} className="">
+                                  <div
++                                   className="sc-beqWay bwngVl"
+-                                   className="sc-dmqHEY jwReaI"
+                                    ref={{current:null}}
+                                  >
+                              <FacebookFooter>
+                                <styled.div ref={{current:null}} className="">
+                                  <div
++                                   className="sc-gueYod gfuBwf"
+-                                   className="sc-hLseeT YniuB"
+                                    ref={{current:null}}
+                                  >
+                              <TikTokFooter>
+                                <styled.div ref={{current:null}} className="">
+                                  <div
++                                   className="sc-dmqHEY JSxKP"
+-                                   className="sc-eDDNvO fjRMQp"
+                                    ref={{current:null}}
+                                  >
+                              <EmailFooter>
+                                <styled.div ref={{current:null}} className="">
+                                  <div
++                                   className="sc-hLseeT coHmvp"
+-                                   className="sc-jTrPJt bOaLCY"
+                                    ref={{current:null}}
+                                  >
+                      ...
+                    ...
+
+[00:10:50.795] Server  LOG     ✓ Compiled in 20.7s
+[00:11:02.884] Server  LOG     ✓ Compiled in 3.1s
+[00:11:20.659] Server  LOG     ✓ Compiled in 3s
+[00:11:42.570] Server  LOG     ✓ Compiled in 3s
+[00:11:43.223] Browser ERROR   ./components/SideMenu.tsx:22:23
+Parsing ecmascript source code failed
+  20 |       left: "20px",
+  21 |       zIndex: 1000,
+> 22 |       background: #607D8B,
+     |                       ^
+  23 |       border: "none",
+  24 |       width: "50px",
+  25 |       height: "50px",
+
+Identifier cannot follow number
+
+Import trace:
+  Server Component:
+    ./components/SideMenu.tsx
+    ./app/layout.tsx
+[00:12:03.470] Browser ERROR   ./components/SideMenu.tsx:22:21
+Parsing ecmascript source code failed
+  20 |       left: "20px",
+  21 |       zIndex: 1000,
+> 22 |       background: #2F855A,
+     |                     ^
+  23 |       border: "none",
+  24 |       width: "50px",
+  25 |       height: "50px",
+
+Identifier cannot follow number
+
+Import trace:
+  Server Component:
+    ./components/SideMenu.tsx
+    ./app/layout.tsx
+[00:12:24.644] Browser ERROR   ./components/SideMenu.tsx:22:22
+Parsing ecmascript source code failed
+  20 |       left: "20px",
+  21 |       zIndex: 1000,
+> 22 |       background: #38A169,
+     |                      ^
+  23 |       border: "none",
+  24 |       width: "50px",
+  25 |       height: "50px",
+
+Identifier cannot follow number
+
+Import trace:
+  Server Component:
+    ./components/SideMenu.tsx
+    ./app/layout.tsx
+[00:12:43.942] Browser ERROR   ./components/SideMenu.tsx:22:23
+Parsing ecmascript source code failed
+  20 |       left: "20px",
+  21 |       zIndex: 1000,
+> 22 |       background: #2E7D32,
+     |                       ^
+  23 |       border: "none",
+  24 |       width: "50px",
+  25 |       height: "50px",
+
+Identifier cannot follow number
+
+Import trace:
+  Server Component:
+    ./components/SideMenu.tsx
+    ./app/layout.tsx
+[00:13:04.054] Browser ERROR   ./components/SideMenu.tsx:22:21
+Parsing ecmascript source code failed
+  20 |       left: "20px",
+  21 |       zIndex: 1000,
+> 22 |       background: #1B5E20,
+     |                     ^
+  23 |       border: "none",
+  24 |       width: "50px",
+  25 |       height: "50px",
+
+Identifier cannot follow number
+
+Import trace:
+  Server Component:
+    ./components/SideMenu.tsx
+    ./app/layout.tsx
+[00:13:16.784] Server  LOG     ✓ Compiled in 2.4s
+[00:16:19.550] Server  LOG     ✓ Compiled in 4.2s
+[00:16:19.657] Browser ERROR   ./components/SideMenu.tsx:22:22
+Parsing ecmascript source code failed
+  20 |       left: "20px",
+  21 |       zIndex: 1000,
+> 22 |       background: #00FF44,
+     |                      ^
+  23 |       border: "none",
+  24 |       width: "50px",
+  25 |       height: "50px",
+
+Identifier cannot follow number
+
+Import trace:
+  Server Component:
+    ./components/SideMenu.tsx
+    ./app/layout.tsx
+[00:16:50.983] Browser ERROR   ./components/SideMenu.tsx:22:27
+Parsing ecmascript source code failed
+  20 |       left: "20px",
+  21 |       zIndex: 1000,
+> 22 |       backgroundColor: #00FF44,
+     |                           ^
+  23 |       border: "none",
+  24 |       width: "50px",
+  25 |       height: "50px",
+
+Identifier cannot follow number
+
+Import trace:
+  Server Component:
+    ./components/SideMenu.tsx
+    ./app/layout.tsx
+[00:17:12.564] Server  LOG     ✓ Compiled in 3.7s
+[00:17:49.290] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:26:05.834] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:26:55.242] Server  LOG     ✓ Compiled in 3s
+[00:27:26.312] Server  LOG     ✓ Compiled in 2.4s
+[00:27:51.402] Server  LOG     ✓ Compiled in 2.6s
+[00:28:01.816] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:37:39.874] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:39:25.414] Server  LOG     ✓ Compiled in 4.2s
+[00:39:52.151] Server  LOG     ✓ Compiled in 4.1s
+[00:40:05.412] Server  LOG     ✓ Compiled in 4.4s
+[00:41:06.458] Server  LOG     ✓ Compiled in 4s
+[00:41:30.026] Server  LOG     ✓ Compiled in 3s
+[00:41:57.622] Server  LOG     ✓ Compiled in 3.4s
+[00:42:26.697] Server  LOG     ✓ Compiled in 2.7s
+[00:46:23.508] Server  LOG     ✓ Compiled in 9.7s
+[00:46:49.343] Server  LOG     ✓ Compiled in 9.1s
+[00:47:28.555] Server  LOG     ✓ Compiled in 10s
+[00:50:18.143] Server  LOG     ✓ Compiled in 10.5s
+[01:01:21.620] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:05:09.980] Server  LOG     ✓ Compiled in 9.1s
+[01:05:33.811] Server  LOG     ✓ Compiled in 7.4s
+[01:13:45.667] Server  LOG     ✓ Compiled in 13s
+[01:24:24.007] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:27:34.332] Server  LOG     ✓ Compiled in 2.7s
+[01:29:11.081] Server  LOG     ✓ Compiled in 7.9s
+[01:30:16.565] Server  LOG     ✓ Compiled in 2.4s
+[01:35:42.887] Server  LOG     ✓ Compiled in 7s
+[01:36:19.887] Server  LOG     ✓ Compiled in 7.9s
+[02:02:23.608] Server  LOG     ✓ Compiled in 12.6s
+[02:02:58.523] Server  LOG     ✓ Compiled in 15.6s
+[02:03:21.351] Server  LOG     ✓ Compiled in 2.9s
+[02:06:08.526] Server  LOG     ✓ Compiled in 13.5s
+[02:06:30.472] Server  LOG     ✓ Compiled in 3.6s
+[02:23:54.146] Server  LOG     ✓ Compiled in 12s
+[02:24:10.356] Server  LOG     ✓ Finished writing to filesystem cache in 14.2s
+[02:24:34.167] Server  LOG     ✓ Compiled in 7.1s
+[02:25:02.921] Server  LOG     ✓ Compiled in 3.1s
+[02:25:07.201] Server  LOG     ✓ Compiled in 3.1s
+[02:27:02.246] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:30:46.721] Server  LOG     ✓ Compiled in 7.3s
+[02:37:44.222] Server  LOG     ✓ Compiled in 2.7s
+[02:38:18.566] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:45:23.794] Server  LOG     ✓ Compiled in 4.5s
+[02:46:13.288] Server  LOG     ✓ Compiled in 4.3s
+[02:49:38.350] Server  LOG     ✓ Compiled in 4.2s
+[03:35:33.503] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[03:38:25.557] Server  LOG     ✓ Compiled in 7.5s
+[03:39:02.479] Server  LOG     ✓ Compiled in 14.5s
+[03:39:44.397] Server  LOG     ✓ Compiled in 9.7s
+[03:40:22.755] Server  LOG     ✓ Compiled in 12.7s
+[03:44:13.478] Server  LOG     ✓ Compiled in 25.9s
+[03:45:45.534] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[03:46:04.898] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[03:46:54.500] Server  LOG     ✓ Compiled in 5.3s
+[03:47:30.207] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[03:48:53.109] Server  LOG     ✓ Compiled in 12.8s
+[03:49:23.396] Server  LOG     ✓ Compiled in 5.5s
+[03:49:58.403] Server  LOG     ✓ Compiled in 8s
+[03:51:04.943] Server  LOG     ✓ Compiled in 11.3s
+[03:52:50.132] Server  LOG     ✓ Compiled in 5.6s
+[03:53:10.738] Server  LOG     ✓ Compiled in 5.8s
+[03:53:30.898] Server  LOG     ✓ Compiled in 8.6s
+[03:55:07.717] Server  LOG     ✓ Compiled in 31ms
