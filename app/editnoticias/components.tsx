@@ -460,7 +460,7 @@ export const EditorBloques: React.FC<EditorProps> = memo(({
                   onChange({ ...publicacion, titulo: e.target.value })
                 }
                 placeholder="Escribe un título atractivo..."
-                className="w-full text-xl sm:text-2xl font-bold border-b-2 border-gray-200 focus:border-blue-500 outline-none px-0 py-2 bg-transparent transition-colors"
+                className="w-full text-xl sm:text-2xl font-bold border-b-2 border-gray-200 focus:border-blue-500 outline-none px-0 py-2 bg-transparent transition-colors text-gray-900"
               />
             </div>
             <span
@@ -488,7 +488,7 @@ export const EditorBloques: React.FC<EditorProps> = memo(({
                   })
                 }
                 placeholder="Breve descripción para SEO..."
-                className="w-full text-sm text-gray-600 border border-gray-200 rounded-lg p-3 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none resize-none bg-gray-50"
+                className="w-full text-sm text-gray-900 border border-gray-200 rounded-lg p-3 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none resize-none bg-gray-50"
                 rows={2}
               />
             </div>
@@ -506,7 +506,7 @@ export const EditorBloques: React.FC<EditorProps> = memo(({
                   })
                 }
                 placeholder="Ej: Noticias, Productos..."
-                className="w-full text-sm border border-gray-200 rounded-lg p-3 focus:ring-2 focus:ring-blue-500 outline-none bg-gray-50"
+                className="w-full text-sm text-gray-900 border border-gray-200 rounded-lg p-3 focus:ring-2 focus:ring-blue-500 outline-none bg-gray-50"
               />
             </div>
           </div>
@@ -782,19 +782,19 @@ const VistaPreviaBloque: React.FC<{ bloque: Bloque }> = memo(({ bloque }) => {
   switch (tipo) {
     case "titulo":
       return (
-        <h1 style={style} className="break-words text-xl sm:text-2xl md:text-3xl font-bold">
+        <h1 style={style} className="break-words text-xl sm:text-2xl md:text-3xl font-bold text-gray-900">
           {(contenido.texto as string) || "Título de ejemplo"}
         </h1>
       );
     case "subtitulo":
       return (
-        <h2 style={style} className="break-words text-lg sm:text-xl md:text-2xl font-semibold">
+        <h2 style={style} className="break-words text-lg sm:text-xl md:text-2xl font-semibold text-gray-800">
           {(contenido.texto as string) || "Subtítulo de ejemplo"}
         </h2>
       );
     case "texto":
       return (
-        <p style={style} className="break-words text-sm sm:text-base leading-relaxed">
+        <p style={style} className="break-words text-sm sm:text-base leading-relaxed text-gray-700">
           {(contenido.texto as string) || "Lorem ipsum dolor sit amet, consectetur adipiscing elit."}
         </p>
       );
@@ -830,7 +830,7 @@ const VistaPreviaBloque: React.FC<{ bloque: Bloque }> = memo(({ bloque }) => {
     case "card_texto":
       return (
         <div style={style} className="rounded-xl p-4 bg-white shadow-sm">
-          <h3 className="font-bold mb-2 text-base sm:text-lg">{(contenido.titulo as string) || "Card"}</h3>
+          <h3 className="font-bold mb-2 text-base sm:text-lg text-gray-900">{(contenido.titulo as string) || "Card"}</h3>
           <p className="text-sm text-gray-600 line-clamp-3">{(contenido.texto as string) || "Contenido..."}</p>
         </div>
       );
@@ -853,7 +853,7 @@ const VistaPreviaBloque: React.FC<{ bloque: Bloque }> = memo(({ bloque }) => {
             className="w-full h-32 sm:h-48 object-cover"
           />
           <div className="p-4">
-            <h3 className="font-bold mb-2 text-base sm:text-lg">{(contenido.titulo as string) || "Título"}</h3>
+            <h3 className="font-bold mb-2 text-base sm:text-lg text-gray-900">{(contenido.titulo as string) || "Título"}</h3>
             <p className="text-gray-600 text-sm line-clamp-2">{(contenido.texto as string) || "Descripción..."}</p>
           </div>
         </div>
@@ -861,8 +861,8 @@ const VistaPreviaBloque: React.FC<{ bloque: Bloque }> = memo(({ bloque }) => {
     case "card_cta":
       return (
         <div style={style} className="rounded-xl p-6 text-center">
-          <h3 className="text-lg sm:text-xl font-bold mb-2">{(contenido.titulo as string) || "¡Accede ahora!"}</h3>
-          <p className="mb-4 text-sm opacity-90 line-clamp-2">{(contenido.texto as string) || "Descripción"}</p>
+          <h3 className="text-lg sm:text-xl font-bold mb-2 text-gray-900">{(contenido.titulo as string) || "¡Accede ahora!"}</h3>
+          <p className="mb-4 text-sm opacity-90 text-gray-700 line-clamp-2">{(contenido.texto as string) || "Descripción"}</p>
           <button className="bg-white text-blue-600 px-6 py-2 rounded-full font-semibold text-sm shadow-lg">
             {(contenido.textoBoton as string) || "Click aquí"}
           </button>
@@ -871,7 +871,7 @@ const VistaPreviaBloque: React.FC<{ bloque: Bloque }> = memo(({ bloque }) => {
     case "card_links":
       return (
         <div style={style} className="rounded-xl p-4 bg-gray-50">
-          <h3 className="font-bold mb-3 text-base sm:text-lg">{(contenido.titulo as string) || "Enlaces"}</h3>
+          <h3 className="font-bold mb-3 text-base sm:text-lg text-gray-900">{(contenido.titulo as string) || "Enlaces"}</h3>
           <ul className="space-y-1">
             {((contenido.links as Array<{texto: string, url: string}>) || []).slice(0, 3).map((link, i) => (
               <li key={i} className="text-blue-600 text-sm truncate">→ {link.texto}</li>
@@ -885,13 +885,13 @@ const VistaPreviaBloque: React.FC<{ bloque: Bloque }> = memo(({ bloque }) => {
     case "banner":
       return (
         <div style={style} className="rounded-xl p-6 sm:p-8 text-center">
-          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-2">{(contenido.titulo as string) || "Banner Hero"}</h2>
-          <p className="text-sm sm:text-base opacity-90">{(contenido.subtitulo as string) || "Subtítulo"}</p>
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold mb-2 text-gray-900">{(contenido.titulo as string) || "Banner Hero"}</h2>
+          <p className="text-sm sm:text-base opacity-90 text-gray-700">{(contenido.subtitulo as string) || "Subtítulo"}</p>
         </div>
       );
     case "cita":
       return (
-        <blockquote style={style} className="border-l-4 border-blue-500 pl-4 italic text-sm sm:text-base">
+        <blockquote style={style} className="border-l-4 border-blue-500 pl-4 italic text-sm sm:text-base text-gray-700">
           {(contenido.texto as string) || "Cita destacada..."}
         </blockquote>
       );
@@ -972,7 +972,7 @@ const VistaPreviaBloque: React.FC<{ bloque: Bloque }> = memo(({ bloque }) => {
               {((configuracion.filas as Array<string[]>) || []).slice(0, 2).map((fila, i) => (
                 <tr key={i} className={i === 0 ? "bg-gray-100 font-semibold" : "border-t"}>
                   {fila.slice(0, 3).map((celda, j) => (
-                    <td key={j} className="p-2 border-r last:border-r-0">{celda}</td>
+                    <td key={j} className="p-2 border-r last:border-r-0 text-gray-700">{celda}</td>
                   ))}
                 </tr>
               ))}
@@ -1032,7 +1032,7 @@ const VistaPreviaBloque: React.FC<{ bloque: Bloque }> = memo(({ bloque }) => {
     case "contador":
       return (
         <div style={style} className="p-4">
-          <div className="text-2xl sm:text-3xl font-bold text-center">
+          <div className="text-2xl sm:text-3xl font-bold text-center text-gray-900">
             {(configuracion.prefijo || "")}
             {(contenido.valor as number) || 0}
             {(configuracion.sufijo || "")}
@@ -1045,10 +1045,10 @@ const VistaPreviaBloque: React.FC<{ bloque: Bloque }> = memo(({ bloque }) => {
     case "newsletter":
       return (
         <div style={style} className="rounded-xl p-4">
-          <h3 className="text-base sm:text-lg font-bold mb-2">{(contenido.titulo as string) || "Newsletter"}</h3>
-          <p className="mb-3 text-xs sm:text-sm opacity-80">{(contenido.descripcion as string) || "Suscríbete"}</p>
+          <h3 className="text-base sm:text-lg font-bold mb-2 text-gray-900">{(contenido.titulo as string) || "Newsletter"}</h3>
+          <p className="mb-3 text-xs sm:text-sm opacity-80 text-gray-700">{(contenido.descripcion as string) || "Suscríbete"}</p>
           <div className="flex gap-2">
-            <input type="email" placeholder="Email" className="flex-1 px-3 py-2 border rounded-lg text-xs sm:text-sm bg-white/50" disabled />
+            <input type="email" placeholder="Email" className="flex-1 px-3 py-2 border rounded-lg text-xs sm:text-sm bg-white/50 text-gray-900" disabled />
             <button className="px-4 py-2 bg-blue-600 text-white rounded-lg text-xs sm:text-sm font-medium">Suscribir</button>
           </div>
         </div>
@@ -1056,14 +1056,14 @@ const VistaPreviaBloque: React.FC<{ bloque: Bloque }> = memo(({ bloque }) => {
     case "codigo":
       return (
         <pre style={{...style, background: "#1f2937", color: "#f9fafb"}} className="p-4 rounded-xl overflow-x-auto text-xs sm:text-sm font-mono">
-          <code className="break-all">{(contenido.codigo as string) || "// Código..."}</code>
+          <code className="break-all text-gray-100">{(contenido.codigo as string) || "// Código..."}</code>
         </pre>
       );
     case "cta":
       return (
         <div style={style} className="rounded-xl p-6 text-center">
-          <h3 className="text-lg sm:text-xl font-bold mb-2">{(contenido.titulo as string) || "¡Llama a la acción!"}</h3>
-          <p className="mb-4 text-xs sm:text-sm opacity-90">{(contenido.texto as string) || "Descripción"}</p>
+          <h3 className="text-lg sm:text-xl font-bold mb-2 text-gray-900">{(contenido.titulo as string) || "¡Llama a la acción!"}</h3>
+          <p className="mb-4 text-xs sm:text-sm opacity-90 text-gray-700">{(contenido.texto as string) || "Descripción"}</p>
           <button className="px-6 py-2 bg-white text-blue-600 rounded-full font-bold text-xs sm:text-sm shadow-lg">
             {(contenido.boton as string) || "Comenzar"}
           </button>
@@ -1210,7 +1210,7 @@ const PanelEdicionBloque: React.FC<{
       isFocusedRef.current = true;
     };
 
-    const inputClass = "w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all bg-white";
+    const inputClass = "w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all bg-white text-gray-900";
 
     return (
       <div className="mb-3">
@@ -1322,7 +1322,7 @@ const PanelEdicionBloque: React.FC<{
                 <select
                   value={configuracion.aspectRatio || "16/9"}
                   onChange={(e) => updateConfig("aspectRatio", e.target.value)}
-                  className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm bg-white"
+                  className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm bg-white text-gray-900"
                 >
                   <option value="16/9">16:9</option>
                   <option value="4/3">4:3</option>
@@ -1331,15 +1331,15 @@ const PanelEdicionBloque: React.FC<{
                 </select>
               </div>
               <div className="space-y-2">
-                <label className="flex items-center gap-2 text-sm">
+                <label className="flex items-center gap-2 text-sm text-gray-700">
                   <input type="checkbox" checked={configuracion.autoplay || false} onChange={(e) => updateConfig("autoplay", e.target.checked)} className="rounded" />
                   Autoplay
                 </label>
-                <label className="flex items-center gap-2 text-sm">
+                <label className="flex items-center gap-2 text-sm text-gray-700">
                   <input type="checkbox" checked={configuracion.loop || false} onChange={(e) => updateConfig("loop", e.target.checked)} className="rounded" />
                   Loop
                 </label>
-                <label className="flex items-center gap-2 text-sm">
+                <label className="flex items-center gap-2 text-sm text-gray-700">
                   <input type="checkbox" checked={configuracion.muted || false} onChange={(e) => updateConfig("muted", e.target.checked)} className="rounded" />
                   Muted
                 </label>
@@ -1383,7 +1383,7 @@ const PanelEdicionBloque: React.FC<{
                   <select
                     value={configuracion.tipoBoton || "primario"}
                     onChange={(e) => updateConfig("tipoBoton", e.target.value)}
-                    className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm bg-white"
+                    className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm bg-white text-gray-900"
                   >
                     <option value="primario">Primario</option>
                     <option value="secundario">Secundario</option>
@@ -1456,7 +1456,7 @@ const PanelEdicionBloque: React.FC<{
                       links[index] = { ...link, texto: e.target.value };
                       updateContenido("links", links);
                     }}
-                    className="flex-1 border border-gray-300 rounded px-3 py-2 text-sm"
+                    className="flex-1 border border-gray-300 rounded px-3 py-2 text-sm text-gray-900"
                   />
                   <input
                     type="text"
@@ -1467,7 +1467,7 @@ const PanelEdicionBloque: React.FC<{
                       links[index] = { ...link, url: e.target.value };
                       updateContenido("links", links);
                     }}
-                    className="flex-1 border border-gray-300 rounded px-3 py-2 text-sm"
+                    className="flex-1 border border-gray-300 rounded px-3 py-2 text-sm text-gray-900"
                   />
                   <button
                     onClick={() => {
@@ -1513,7 +1513,7 @@ const PanelEdicionBloque: React.FC<{
                 onChange={(e) => updateConfig("fullWidth", e.target.checked)}
                 className="w-4 h-4 rounded"
               />
-              <span className="text-sm">Ancho completo</span>
+              <span className="text-sm text-gray-700">Ancho completo</span>
             </label>
           </div>
         );
@@ -1558,7 +1558,7 @@ const PanelEdicionBloque: React.FC<{
                 onChange={(e) => updateConfig("autoplay", e.target.checked)}
                 className="w-4 h-4 rounded"
               />
-              <span className="text-sm font-medium">Autoplay</span>
+              <span className="text-sm font-medium text-gray-700">Autoplay</span>
             </label>
             
             <div>
@@ -1567,7 +1567,7 @@ const PanelEdicionBloque: React.FC<{
                 {((configuracion.slides as Array<{imagen: string, titulo: string, texto: string}>) || []).map((slide, index) => (
                   <div key={index} className="p-3 bg-white rounded-lg border border-gray-200">
                     <div className="flex justify-between items-center mb-2">
-                      <span className="font-medium text-sm">Slide {index + 1}</span>
+                      <span className="font-medium text-sm text-gray-700">Slide {index + 1}</span>
                       <button
                         onClick={() => removeArrayItem("slides", index)}
                         className="text-red-600 hover:text-red-800 text-sm"
@@ -1581,21 +1581,21 @@ const PanelEdicionBloque: React.FC<{
                         placeholder="URL imagen"
                         defaultValue={slide.imagen}
                         onBlur={(e) => updateArrayItem("slides", index, { ...slide, imagen: e.target.value })}
-                        className="w-full border border-gray-300 rounded px-3 py-2 text-sm"
+                        className="w-full border border-gray-300 rounded px-3 py-2 text-sm text-gray-900"
                       />
                       <input
                         type="text"
                         placeholder="Título"
                         defaultValue={slide.titulo}
                         onBlur={(e) => updateArrayItem("slides", index, { ...slide, titulo: e.target.value })}
-                        className="w-full border border-gray-300 rounded px-3 py-2 text-sm"
+                        className="w-full border border-gray-300 rounded px-3 py-2 text-sm text-gray-900"
                       />
                       <textarea
                         placeholder="Texto"
                         defaultValue={slide.texto}
                         onBlur={(e) => updateArrayItem("slides", index, { ...slide, texto: e.target.value })}
                         rows={2}
-                        className="w-full border border-gray-300 rounded px-3 py-2 text-sm resize-none"
+                        className="w-full border border-gray-300 rounded px-3 py-2 text-sm resize-none text-gray-900"
                       />
                     </div>
                   </div>
@@ -1618,14 +1618,14 @@ const PanelEdicionBloque: React.FC<{
             {((configuracion.testimonios as Array<any>) || []).map((test, index) => (
               <div key={index} className="p-3 bg-white rounded-lg border border-gray-200">
                 <div className="flex justify-between items-center mb-2">
-                  <span className="font-medium text-sm">Testimonio {index + 1}</span>
+                  <span className="font-medium text-sm text-gray-700">Testimonio {index + 1}</span>
                   <button onClick={() => removeArrayItem("testimonios", index)} className="text-red-600 text-sm">Eliminar</button>
                 </div>
                 <div className="space-y-2">
-                  <input type="text" placeholder="Nombre" defaultValue={test.nombre} onBlur={(e) => updateArrayItem("testimonios", index, { ...test, nombre: e.target.value })} className="w-full border rounded px-3 py-2 text-sm" />
-                  <input type="text" placeholder="Cargo" defaultValue={test.cargo} onBlur={(e) => updateArrayItem("testimonios", index, { ...test, cargo: e.target.value })} className="w-full border rounded px-3 py-2 text-sm" />
-                  <input type="text" placeholder="URL imagen" defaultValue={test.imagen || ""} onBlur={(e) => updateArrayItem("testimonios", index, { ...test, imagen: e.target.value })} className="w-full border rounded px-3 py-2 text-sm" />
-                  <textarea placeholder="Texto" defaultValue={test.texto} onBlur={(e) => updateArrayItem("testimonios", index, { ...test, texto: e.target.value })} rows={2} className="w-full border rounded px-3 py-2 text-sm resize-none" />
+                  <input type="text" placeholder="Nombre" defaultValue={test.nombre} onBlur={(e) => updateArrayItem("testimonios", index, { ...test, nombre: e.target.value })} className="w-full border rounded px-3 py-2 text-sm text-gray-900" />
+                  <input type="text" placeholder="Cargo" defaultValue={test.cargo} onBlur={(e) => updateArrayItem("testimonios", index, { ...test, cargo: e.target.value })} className="w-full border rounded px-3 py-2 text-sm text-gray-900" />
+                  <input type="text" placeholder="URL imagen" defaultValue={test.imagen || ""} onBlur={(e) => updateArrayItem("testimonios", index, { ...test, imagen: e.target.value })} className="w-full border rounded px-3 py-2 text-sm text-gray-900" />
+                  <textarea placeholder="Texto" defaultValue={test.texto} onBlur={(e) => updateArrayItem("testimonios", index, { ...test, texto: e.target.value })} rows={2} className="w-full border rounded px-3 py-2 text-sm resize-none text-gray-900" />
                 </div>
               </div>
             ))}
@@ -1639,8 +1639,8 @@ const PanelEdicionBloque: React.FC<{
             <label className="block text-xs font-semibold text-gray-600 uppercase mb-2">Items</label>
             {((configuracion.iconos as Array<any>) || []).map((item, index) => (
               <div key={index} className="flex gap-2 p-2 bg-white rounded-lg border border-gray-200">
-                <input type="text" placeholder="Icono" defaultValue={item.icono} onBlur={(e) => updateArrayItem("iconos", index, { ...item, icono: e.target.value })} className="w-16 border rounded px-2 py-2 text-center text-lg" />
-                <input type="text" placeholder="Texto" defaultValue={item.texto} onBlur={(e) => updateArrayItem("iconos", index, { ...item, texto: e.target.value })} className="flex-1 border rounded px-3 py-2 text-sm" />
+                <input type="text" placeholder="Icono" defaultValue={item.icono} onBlur={(e) => updateArrayItem("iconos", index, { ...item, icono: e.target.value })} className="w-16 border rounded px-2 py-2 text-center text-lg text-gray-900" />
+                <input type="text" placeholder="Texto" defaultValue={item.texto} onBlur={(e) => updateArrayItem("iconos", index, { ...item, texto: e.target.value })} className="flex-1 border rounded px-3 py-2 text-sm text-gray-900" />
                 <button onClick={() => removeArrayItem("iconos", index)} className="px-2 text-red-600 hover:bg-red-50 rounded">✕</button>
               </div>
             ))}
@@ -1683,7 +1683,7 @@ const PanelEdicionBloque: React.FC<{
               <select
                 value={(contenido.lenguaje as string) || "javascript"}
                 onChange={(e) => updateContenido("lenguaje", e.target.value)}
-                className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm bg-white"
+                className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm bg-white text-gray-900"
               >
                 <option value="javascript">JavaScript</option>
                 <option value="typescript">TypeScript</option>
@@ -1722,12 +1722,12 @@ const PanelEdicionBloque: React.FC<{
                 max={6}
                 value={configuracion.columns || 3}
                 onChange={(e) => updateConfig("columns", parseInt(e.target.value) || 3)}
-                className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm"
+                className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm text-gray-900"
               />
             </div>
             <label className="flex items-center gap-2 p-3 bg-white rounded-lg border border-gray-200">
               <input type="checkbox" checked={configuracion.lightbox || false} onChange={(e) => updateConfig("lightbox", e.target.checked)} className="rounded" />
-              <span className="text-sm">Activar lightbox</span>
+              <span className="text-sm text-gray-700">Activar lightbox</span>
             </label>
             <div className="space-y-2">
               <label className="block text-xs font-semibold text-gray-600 uppercase">Imágenes</label>
@@ -1737,12 +1737,12 @@ const PanelEdicionBloque: React.FC<{
                     const imgs = [...((contenido.imagenes as Array<any>) || [])];
                     imgs[index] = { ...img, src: e.target.value };
                     updateContenido("imagenes", imgs);
-                  }} className="flex-1 border rounded px-3 py-2 text-sm" />
+                  }} className="flex-1 border rounded px-3 py-2 text-sm text-gray-900" />
                   <input type="text" placeholder="Alt" defaultValue={img.alt} onBlur={(e) => {
                     const imgs = [...((contenido.imagenes as Array<any>) || [])];
                     imgs[index] = { ...img, alt: e.target.value };
                     updateContenido("imagenes", imgs);
-                  }} className="w-24 border rounded px-3 py-2 text-sm" />
+                  }} className="w-24 border rounded px-3 py-2 text-sm text-gray-900" />
                   <button onClick={() => {
                     const imgs = ((contenido.imagenes as Array<any>) || []).filter((_, i) => i !== index);
                     updateContenido("imagenes", imgs);
@@ -1765,7 +1765,7 @@ const PanelEdicionBloque: React.FC<{
             <div className="grid grid-cols-2 gap-3">
               <div>
                 <label className="block text-xs font-semibold text-gray-600 uppercase mb-1.5">Variante</label>
-                <select value={configuracion.variante || "solid"} onChange={(e) => updateConfig("variante", e.target.value)} className="w-full border rounded-lg px-3 py-2 text-sm bg-white">
+                <select value={configuracion.variante || "solid"} onChange={(e) => updateConfig("variante", e.target.value)} className="w-full border rounded-lg px-3 py-2 text-sm bg-white text-gray-900">
                   <option value="solid">Sólido</option>
                   <option value="outline">Outline</option>
                   <option value="ghost">Ghost</option>
@@ -1774,7 +1774,7 @@ const PanelEdicionBloque: React.FC<{
               </div>
               <div>
                 <label className="block text-xs font-semibold text-gray-600 uppercase mb-1.5">Tamaño</label>
-                <select value={configuracion.tamaño || "md"} onChange={(e) => updateConfig("tamaño", e.target.value)} className="w-full border rounded-lg px-3 py-2 text-sm bg-white">
+                <select value={configuracion.tamaño || "md"} onChange={(e) => updateConfig("tamaño", e.target.value)} className="w-full border rounded-lg px-3 py-2 text-sm bg-white text-gray-900">
                   <option value="sm">Pequeño</option>
                   <option value="md">Mediano</option>
                   <option value="lg">Grande</option>
@@ -1810,7 +1810,7 @@ const PanelEdicionBloque: React.FC<{
             value={estilos.color || ""}
             onChange={(e) => updateEstilo("color", e.target.value)}
             placeholder="#000000"
-            className="flex-1 border border-gray-300 rounded-lg px-3 py-2 text-sm"
+            className="flex-1 border border-gray-300 rounded-lg px-3 py-2 text-sm text-gray-900"
           />
         </div>
       </div>
@@ -1829,7 +1829,7 @@ const PanelEdicionBloque: React.FC<{
             value={estilos.background || ""}
             onChange={(e) => updateEstilo("background", e.target.value)}
             placeholder="transparent"
-            className="flex-1 border border-gray-300 rounded-lg px-3 py-2 text-sm"
+            className="flex-1 border border-gray-300 rounded-lg px-3 py-2 text-sm text-gray-900"
           />
         </div>
       </div>
@@ -1844,7 +1844,7 @@ const PanelEdicionBloque: React.FC<{
         <select
           value={estilos.textAlign || "left"}
           onChange={(e) => updateEstilo("textAlign", e.target.value)}
-          className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm bg-white"
+          className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm bg-white text-gray-900"
         >
           <option value="left">Izquierda</option>
           <option value="center">Centro</option>
@@ -1863,7 +1863,7 @@ const PanelEdicionBloque: React.FC<{
         <select
           value={estilos.textTransform || "none"}
           onChange={(e) => updateEstilo("textTransform", e.target.value)}
-          className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm bg-white"
+          className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm bg-white text-gray-900"
         >
           <option value="none">Normal</option>
           <option value="uppercase">MAYÚSCULAS</option>
@@ -1890,7 +1890,7 @@ const PanelEdicionBloque: React.FC<{
             max={12}
             value={configuracion.columns || 2}
             onChange={(e) => updateConfig("columns", parseInt(e.target.value))}
-            className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm"
+            className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm text-gray-900"
           />
         </div>
       );
@@ -1904,7 +1904,7 @@ const PanelEdicionBloque: React.FC<{
             <select
               value={estilos.flexDirection || "row"}
               onChange={(e) => updateEstilo("flexDirection", e.target.value)}
-              className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm bg-white"
+              className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm bg-white text-gray-900"
             >
               <option value="row">Fila</option>
               <option value="column">Columna</option>
@@ -1917,7 +1917,7 @@ const PanelEdicionBloque: React.FC<{
             <select
               value={estilos.justifyContent || "flex-start"}
               onChange={(e) => updateEstilo("justifyContent", e.target.value)}
-              className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm bg-white"
+              className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm bg-white text-gray-900"
             >
               <option value="flex-start">Inicio</option>
               <option value="center">Centro</option>
@@ -1932,7 +1932,7 @@ const PanelEdicionBloque: React.FC<{
             <select
               value={estilos.alignItems || "stretch"}
               onChange={(e) => updateEstilo("alignItems", e.target.value)}
-              className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm bg-white"
+              className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm bg-white text-gray-900"
             >
               <option value="stretch">Estirar</option>
               <option value="flex-start">Inicio</option>
@@ -1951,11 +1951,11 @@ const PanelEdicionBloque: React.FC<{
         <div key="carousel" className="space-y-3">
           <label className="flex items-center gap-2 p-3 bg-white rounded-lg border border-gray-200">
             <input type="checkbox" checked={configuracion.mostrarDots !== false} onChange={(e) => updateConfig("mostrarDots", e.target.checked)} className="rounded" />
-            <span className="text-sm">Mostrar dots</span>
+            <span className="text-sm text-gray-700">Mostrar dots</span>
           </label>
           <label className="flex items-center gap-2 p-3 bg-white rounded-lg border border-gray-200">
             <input type="checkbox" checked={configuracion.mostrarFlechas !== false} onChange={(e) => updateConfig("mostrarFlechas", e.target.checked)} className="rounded" />
-            <span className="text-sm">Mostrar flechas</span>
+            <span className="text-sm text-gray-700">Mostrar flechas</span>
           </label>
           <div>
             <label className="block text-xs font-semibold text-gray-600 uppercase mb-1.5">Intervalo (ms)</label>
@@ -1963,7 +1963,7 @@ const PanelEdicionBloque: React.FC<{
               type="number"
               value={configuracion.intervalo || 5000}
               onChange={(e) => updateConfig("intervalo", parseInt(e.target.value))}
-              className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm"
+              className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm text-gray-900"
             />
           </div>
         </div>
@@ -2160,7 +2160,7 @@ export const ListaPublicaciones: React.FC<{
                 value={busqueda}
                 onChange={(e) => setBusqueda(e.target.value)}
                 placeholder="Buscar publicaciones..."
-                className="w-full pl-10 pr-4 py-2 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
+                className="w-full pl-10 pr-4 py-2 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none text-gray-900"
               />
             </div>
           </div>
